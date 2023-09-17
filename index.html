@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .car {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Vertically center align contents */
+        }
+
+        .car img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .car-details {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .car-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .car-description {
+            font-size: 14px;
+        }
+
+        .details-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 100px;
+            /* Set a minimum width for the button to make them consistent */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Car Showroom</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cars
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Porche 911 </a>
+                        <a class="dropdown-item" href="#">Audi A4</a>
+                        <a class="dropdown-item" href="#">Koenigsegg Regera</a>
+                        <a class="dropdown-item" href="#">Mustang GT3</a>
+                        <a class="dropdown-item" href="#">Tarzan</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for cars...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-details" type="button">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Listing Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Car Cards (Sample) -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.3Z4KTzqfqsxHkosXRelHeAHaEm&pid=Api&P=0&h=180"
+                        class="card-img-top" alt="Car 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Audi A4</h5>
+                        <p class="card-text">The Audi A4 has 1 Petrol Engine on offer. The Petrol engine is 1998 cc . It
+                            is available with Automatic transmission.Depending upon the variant and fuel type the A4 has
+                            a mileage of . The A4 is a 5 seater 4 cylinder car and has length of 4762mm, width of 1847mm
+                            and a wheelbase of 2819mm.</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://s.yimg.com/fz/api/res/1.2/fw3Orjg2jDONoo_tJqVPYg--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MzMy/https://s.yimg.com/zb/imgv1/42452359-c4bb-3b71-b4cc-9bcf33f0f0d0/t_500x300"
+                        class="card-img-top" alt="Car 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Porche 911</h5>
+                        <p class="card-text">The Porsche 911 (pronounced Nine Eleven or in German: Neunelf) is a
+                            two-door
+                            2+2 high-performance rear-engined sports car introduced in September 1964 by Porsche AG of
+                            Stuttgart, Germany. It has a rear-mounted flat-six engine and originally a torsion bar
+                            suspension.</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://www.cas-shopfronts.co.uk/wp-content/uploads/2020/09/cars.jpg" class="card-img-top"
+                        alt="Car 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Koenigsegg Regera</h5>
+                        <p class="card-text">The Regera was specifically designed to be a luxury megacar alternative to
+                            Koenigsegg’s traditional extreme, lightweight, race-like road-legal cars. It combines a
+                            powerful twin-turbo V8 combustion engine with three electric motors and cutting-edge battery
+                            power via new powertrain technology called the Koenigsegg Direct Drive.</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional Car Cards -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.Tq4FRhTV8vcxYrsX1Oaz8wHaEK&pid=Api&P=0&h=180"
+                        class="card-img-top" alt="Car 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Mustang gt350cr</h5>
+                        <p class="card-text">The namesake of the "pony car" automobile segment, the Mustang was
+                            developed as a highly styled line of sporty coupes and convertibles derived from existing
+                            model lines, initially distinguished by "long hood, short deck" proportions.</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="http://wallpapercave.com/wp/YgBlrwy.jpg" class="card-img-top" alt="Car 5">
+                    <div class="card-body">
+                        <h5 class="card-title">The Car</h5>
+                        <p class="card-text">This is a description of Car Model 5. It is another fantastic car option.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit tempore culpa animi
+                            illo ipsum dicta accusantium ducimus ipsam eius aliquid, fuga molestiae architecto ex nulla
+                            sapiente possimus assumenda voluptates.
+                        </p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.K1bzFW5d4Icwtaowq9_z_wHaEE&pid=Api&P=0&h=180"
+                        class="card-img-top" alt="Car 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarzan</h5>
+                        <p class="card-text">This is a description of Tarzan. It's known for its performance and
+                            style. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ex quam molestias
+                            eligendi ipsum earum eius assumenda dolore voluptatibus aspernatur a, veniam magni
+                            reprehenderit maiores beatae laborum at commodi porro?</p>
+                        <button class="details-button">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
